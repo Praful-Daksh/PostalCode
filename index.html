@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>Postal Code Finder</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+  }
+
+  header {
+    width: 100vw;
+    background-color: #14151D;
+    color: white;
+  }
+
+  .head {
+    width: 85%;
+    margin: auto;
+    display: grid;
+  }
+
+  .head h1,
+  p {
+    padding-top: 5px;
+  }
+  .input-area{
+    margin-bottom:15px;
+    margin-top:5px;
+    width:70%;
+    background: white;
+    color:black;
+    border-radius:3px;
+    padding-left:5px;
+  }
+  .input-area input{
+    outline: none;
+    border:none;
+    padding-left: 3px;
+  }
+  section {
+    width:100vw;
+    display: grid;
+    place-items: center;
+    grid-gap: 10px;
+  }
+  section article{
+   width:85%;
+   margin-top:10px;
+   display:grid;
+   grid-gap:5px;
+   padding:5px;
+   border:1.5px solid #45CCA9;
+   border-radius:3px;
+  }
+  .article-head{
+   border-bottom:1px solid #45CCA9;
+  }
+  ul{
+    list-style: none;
+  }
+  #alert-area{
+    width:80%;
+   margin-top: 10px;
+   color: #EC5E5E;
+   padding:1px 5px;
+   background: rgba(226, 90, 90, 0.2);
+  backdrop-filter: blur(5px);
+    border:1px solid #EC5E5E;
+    margin: auto;
+    margin-top:10px;
+    display: none;
+  }
+  #qrcode{
+    position: absolute;
+    top:40%;
+    left:45%;
+    font-size:100px;
+    animation:spin 2s linear infinite;
+    display: none;
+  }
+  @keyframes spin{
+  0%{
+    transform:rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+</style>
+
+<body>
+
+  <header>
+    <div class="head">
+      <h1>PostalCode Info</h1>
+      <p>Enter a Valid Indian Postal code Below</p>
+      <div class="input-area">
+        <i class="fa fa-map-location"></i>
+        <input type="number" id="input" placeholder="Enter Here">
+      </div>
+    </div>
+  </header>
+  <div id="alert-area">
+    
+    </div>
+  <section id="display-area">
+     
+  </section>
+   <div id="qrcode">
+      <i class="fa fa-spinner"></i>
+      <div id="qr">
+      </div>
+
+  <script src="app.js">
+  </script>
+</body>
+
+</html>
